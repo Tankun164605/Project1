@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            color: #d9534f;
+        }
+        .no-infected {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Scanner</h1>
+    <form method="POST">
+        <label for="directory">Enter Directory to Scan:</label>
+        <input type="text" id="directory" name="directory" placeholder="e.g., C:/Users/YourName/Documents" required>
+        <button type="submit">Scan</button>
+    </form>
+    <div class="results">
+        {% if infected_files is not none %}
+            <h2>Scan Results:</h2>
+            {% if infected_files %}
+                <ul>
+                    {% for file in infected_files %}
+                        <li>{{ file }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-infected">No infected files found.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
