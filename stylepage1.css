@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f; /* สีพื้นหลัง */
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center; /* จัดกลางแนวตั้ง */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+  
+  }
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    background-image: url('photo1.jpg');
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 60px;
+    background-size: contain;
+    height: 100vh; 
+     
+  }
+  .resize-image {
+    width: auto; 
+    height: auto;
+  }
+  

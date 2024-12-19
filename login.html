@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <input type="checkbox" id="signup_toggle">
+        <div class="form">
+            <div class="resize-image">
+                <img src="photo2.jpg" alt="PCA Plot" height="959px" width="1911px">
+            </div>
+            
+            <div class="form_front">
+                <div class="form_details">WELCOME</div>
+                <input type="email" class="input" placeholder="Email">
+                <input type="password" class="input" placeholder="Password">
+                
+                
+                <a href="page1.html">
+                    <button class="btn">Log In</button>
+                    <script src="script.js"></script>
+                  </a>
+                
+                <div class="switch">
+                    <span class="signup_tog" onclick="document.getElementById('signup_toggle').checked = true;">Don't have an account? Sign up</span>
+                </div>
+            </div>
+            <div class="form_back">
+                <div class="form_details">Sign Up</div>
+                <input type="text" class="input" placeholder="Name">
+                <input type="email" class="input" placeholder="Email">
+                <input type="password" class="input" placeholder="Password">
+                <button class="btn">Sign Up</button>
+                <div class="switch">
+                    <span class="signup_tog" onclick="document.getElementById('signup_toggle').checked = false;">Already have an account? Log in</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
